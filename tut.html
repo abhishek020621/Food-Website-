@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json Tutorial </title>
+</head>
+<body>
+    <div class="container">This is my container</div>
+    <script>
+        let jsonObj = {
+            "name" : "Abhishek",
+            "channel" : " this is my json file"
+        }
+        console.log(jsonObj);
+      /*  console.log(jsonObj["name"]);
+        console.log(jsonObj["channel"]);*/
+        let myJsonstr = JSON.stringify(jsonObj);
+        console.log(myJsonstr);
+        fetch("./tut.json").then((response)=>{
+            return response.json();
+        }).then((jsonObject)=>{
+            console.log(jsonObject)
+        })
+
+    </script>
+</body>
+</html>
